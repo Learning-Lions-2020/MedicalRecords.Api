@@ -2,10 +2,6 @@
 using MedicalRecords.Domain.Contracts;
 using MedicalRecords.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace MedicalRecords.Api.Controllers
 {
@@ -13,7 +9,7 @@ namespace MedicalRecords.Api.Controllers
     [Route("api/[controller]")]
     public class PrescriptionController : ControllerBase
     {
-        private readonly IPrescriptionRepository _prescriptionRepository; // Remove <Prescription> from interface type
+        private readonly IPrescriptionRepository _prescriptionRepository; 
 
         public PrescriptionController(IPrescriptionRepository prescriptionRepository)
         {
@@ -66,14 +62,14 @@ namespace MedicalRecords.Api.Controllers
 
             var prescription = new Prescription
             {
-                Id = Guid.NewGuid(), // Ensure a new Guid is generated for the new prescription
+                Id = Guid.NewGuid(), 
                 Medication = prescriptionDTO.Medication,
                 Dosage = prescriptionDTO.Dosage,
                 AppointmentId = prescriptionDTO.AppointmentId
             };
 
             await _prescriptionRepository.AddAsync(prescription);
-            await _prescriptionRepository.SaveChangesAsync(); // Ensure the changes are saved
+            await _prescriptionRepository.SaveChangesAsync(); 
 
             return CreatedAtAction(nameof(GetPrescription), new { id = prescription.Id }, prescriptionDTO);
         }
@@ -91,7 +87,7 @@ namespace MedicalRecords.Api.Controllers
             prescription.Dosage = prescriptionDTO.Dosage;
 
             await _prescriptionRepository.UpdateAsync(prescription);
-            await _prescriptionRepository.SaveChangesAsync(); // Ensure the changes are saved
+            await _prescriptionRepository.SaveChangesAsync(); 
 
             return NoContent();
         }

@@ -2,10 +2,6 @@
 using MedicalRecords.Domain.Entities;
 using MedicalRecords.Domain.Contracts;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace MedicalRecords.Data.Repositories
 {
@@ -61,7 +57,7 @@ namespace MedicalRecords.Data.Repositories
             if (patient != null)
             {
                 _context.Patients.Remove(patient);
-                await SaveChangesAsync(); // Call SaveChangesAsync to persist the deletion
+                await SaveChangesAsync(); 
             }
         }
 

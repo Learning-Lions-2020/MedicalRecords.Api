@@ -2,9 +2,6 @@
 using MedicalRecords.Domain.Contracts;
 using MedicalRecords.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace MedicalRecords.Api.Controllers
 {
@@ -37,7 +34,7 @@ namespace MedicalRecords.Api.Controllers
                     Id = a.Id,
                     Date = a.Date,
                     DoctorId = a.DoctorId,
-                    DoctorName = a.Doctor?.Name, // Assuming Doctor has a Name property
+                    DoctorName = a.Doctor?.Name, 
                     Prescriptions = a.Prescriptions?.Select(pr => new PrescriptionDTO
                     {
                         Id = pr.Id,
@@ -69,7 +66,7 @@ namespace MedicalRecords.Api.Controllers
                     Id = a.Id,
                     Date = a.Date,
                     DoctorId = a.DoctorId,
-                    DoctorName = a.Doctor?.Name, // Assuming Doctor has a Name property
+                    DoctorName = a.Doctor?.Name, 
                     Prescriptions = a.Prescriptions?.Select(pr => new PrescriptionDTO
                     {
                         Id = pr.Id,

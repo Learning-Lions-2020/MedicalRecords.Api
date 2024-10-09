@@ -1,8 +1,5 @@
 ﻿using MedicalRecords.Data.DBContext;
 using MedicalRecords.Domain.Entities;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
 
 public static class DataSeeder
 {

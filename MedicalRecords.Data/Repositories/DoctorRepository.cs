@@ -2,9 +2,6 @@
 using MedicalRecords.Domain.Contracts;
 using MedicalRecords.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace MedicalRecords.Data.Repositories
 {

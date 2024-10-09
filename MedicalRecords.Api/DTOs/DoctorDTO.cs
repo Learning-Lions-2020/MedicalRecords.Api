@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace MedicalRecords.Api.DTOs
+﻿namespace MedicalRecords.Api.DTOs
 {
     public class DoctorDTO
     {

@@ -1,10 +1,4 @@
-﻿using MedicalRecords.Api.DTOs; // Make sure you have the appropriate namespaces
-using MedicalRecords.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-
-namespace MedicalRecords.Api.DTOs
+﻿namespace MedicalRecords.Api.DTOs
 {
     public class AppointmentDTO
     {

@@ -32,12 +32,12 @@ public class AppointmentController : ControllerBase
             PatientName = a.Patient?.Name ?? "Unknown Patient",
             DoctorId = a.DoctorId,
             DoctorName = a.Doctor?.Name ?? "Unknown Doctor",
-            Prescriptions = a.Prescriptions?.Select(pr => new PrescriptionDTO // Assuming PrescriptionDTO is defined
+            Prescriptions = a.Prescriptions?.Select(pr => new PrescriptionDTO 
             {
                 Id = pr.Id,
                 Medication = pr.Medication,
                 Dosage = pr.Dosage
-            }).ToList() // Assuming Appointment has a collection of Prescriptions
+            }).ToList() 
         }).ToList();
 
         return Ok(appointmentDTOs);
@@ -114,7 +114,6 @@ public class AppointmentController : ControllerBase
         appointment.PatientId = appointmentDTO.PatientId;
         appointment.DoctorId = appointmentDTO.DoctorId;
 
-        // Add logic for updating Prescriptions if needed
 
         await _appointmentRepository.UpdateAsync(appointment);
         return NoContent();
@@ -151,7 +150,7 @@ public class AppointmentController : ControllerBase
                 Id = pr.Id,
                 Medication = pr.Medication,
                 Dosage = pr.Dosage
-            }).ToList() // Include prescriptions in the DTO
+            }).ToList() 
         }).ToList();
 
         return Ok(appointmentDTOs);

@@ -2,9 +2,6 @@
 using MedicalRecords.Domain.Contracts;
 using MedicalRecords.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace MedicalRecords.Api.Controllers
 {

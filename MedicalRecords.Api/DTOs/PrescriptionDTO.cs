@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace MedicalRecords.Api.DTOs
+﻿namespace MedicalRecords.Api.DTOs
 {
     public class PrescriptionDTO
     {

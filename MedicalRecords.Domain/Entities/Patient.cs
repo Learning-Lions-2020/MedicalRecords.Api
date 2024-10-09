@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace MedicalRecords.Domain.Entities
+﻿namespace MedicalRecords.Domain.Entities
 {
     public class Patient
     {

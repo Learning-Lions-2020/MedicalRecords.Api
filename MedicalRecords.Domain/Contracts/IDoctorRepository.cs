@@ -1,7 +1,4 @@
 ﻿using MedicalRecords.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace MedicalRecords.Domain.Contracts
 {
